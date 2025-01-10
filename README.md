@@ -1,7 +1,7 @@
 # MediaMeld
 Seamlessly melding your media into magic
 
-A Full-Stack Comprehensive Media Integration Platform
+A Full-Stack Comprehensive Media Integration Platform - Convert your images and videos into a compiled slideshow with custom audio with ease.
 
 Setup:
 
