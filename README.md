@@ -22,4 +22,5 @@ This multi-page web application empowers users to create custom multimedia slide
 2. Media Storage and Management: Uploaded media files are securely stored in our database, enabling users to manage and reuse their content effortlessly.
 3. Drag-and-Drop Functionality: An intuitive drag-and-drop interface simplifies the process of uploading images, videos, and audio files, making content creation accessible to all users.
 4. Automated Media Integration: The platform efficiently combines user inputs into polished slideshows or videos, synchronized with their chosen audio for professional-quality output.
+
 This platform is designed with user convenience and data integrity in mind, offering a streamlined, innovative approach to multimedia content creation.
