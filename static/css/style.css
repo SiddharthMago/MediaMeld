@@ -1,0 +1,45 @@
+@font-face {
+    font-family: Montserrat;
+    src: url("../Resources/Fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: GeneralSans;
+    src: url("../Resources/Fonts/GeneralSans_Complete/GeneralSans-Variable.ttf");
+}
+
+@font-face {
+    font-family: Zodiak;
+    src: url("../Resources/Fonts/Zodiak_Complete/Zodiak-Variable.ttf");
+}
+
+@font-face {
+    font-family: Boska;
+    src: url("../Resources/Fonts/Boska_Complete/Boska-Variable.ttf");
+}
+
+:root {
+    --bs-font-sans-serif: Montserrat;
+    --background-main: #252b35;
+    --background-main-inverted: #222831; 
+    --text-color-main: #76ABAE;
+    --text-color-darker: #31363F;
+    --background-light: #cee3e4;
+    --background-container: #EEEEEE;
+    --button-color-dark: #252b35;
+    --button-color-light: #dfdfdf;
+    --header-color-main: #76ABAE;
+}
+
+body {
+    background-color: var(--background-main);
+    color: var(--text-color-main);
+}
+
+.home-button {
+    font-size: 50px;
+    color: var(--header-color-main);
+    position: absolute;
+    top: 50px;
+    right: 30px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Upload Images</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.dm-uploader.css') }}">
+	
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/drag_drop.css') }}">
+</head>
+<body>
+	<div class="container p-5 d-flex justify-content-center">
+        <a href="{{ url_for('home') }}"><i class='bx bxs-home-alt-2 home-button'></i></a>
+        <h1 class="display-3 text-center" style="font-weight: 500;">Upload Images</h1>
+    </div>
+
+	<div class="container-fluid d-flex" style="height: 75vh;">
+	<div class="container-fluid d-flex" style="height: 75vh;" id="main_container">
+		<div id="drag-and-drop-zone" class="dm-uploader m-1 col-md-8 d-flex" style="flex-direction: column; justify-content: center;">
+			<h3 class="mb-5 mt-5 text-muted align-middle">Drag &amp; drop files here</h3>
+
+			<div class="btn btn-primary btn-block mb-5 w-25 align-self-center">
+				<span>Open the file Browser</span>
+				<input type="file" title="Click to add files" />
+			</div>
+		</div>
+
+		<div class="col-md-4 p-4">
+			<div class="card h-100">
+			<div class="card h-100" id="files_container">
+				<ul class="list-unstyled p-2 d-flex flex-column col" id="files">
+					<!-- Files will be placed here -->
+				</ul>
+			</div>
+		</div> 
+	</div>
+	
+	<script src="{{ url_for('static', filename='js/drag_drop.js') }}"></script>  <!-- Contains all UI and processing for file uploads -->
+	<script src="{{ url_for('static', filename='js/jquery.dm-uploader.js') }}"></script>
+	<script type="text/html" id="files-template">
+		<li class="media">
+		  <div class="media-body mb-1">
+			<img class="mr-3 mb-2 preview-img" src="data:image/%%file-type%%;base64,%%image-data%%" alt="Generic placeholder image">
+			<div class="progress mb-2">
+			  <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" 
+				role="progressbar"
+				style="width: 0%" 
+				aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+			  </div>
+			</div>
+			<hr class="mt-1 mb-1" />
+		  </div>
+		</li>
+	  </script>
+</body>
